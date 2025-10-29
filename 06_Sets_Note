@@ -1,0 +1,23 @@
+# Set Operators
+## combine the results of multiple queries into a single result set
+
+# Types
+## UNION: combines rows of two table without duplicates
+## UNION ALL: combines rows with duplicates
+## EXCEPT : Gives all rows which are not present in other table
+## INTERSECT: gives results with matching rows from both the tables
+
+# RULES: 
+## Same No. of Columns, Data Types, order of column.
+## 1st Query Controls column names in result
+
+USE CASES:
+## Combine Information (UNION + UNION ALL)
+=> Like Combining tables with same contents to one table then analysing benifit in single analysis query
+
+## Delta DEtection (EXCEPT)
+==> Say As Data Engineer I want to move data from source to data warehouse
+and I can use EXCEPT operator on source side to get only fresh data 
+
+## Data Combpleteness Check (EXCEPT)
+==> To check if moved all the data is completeley migrated or not
