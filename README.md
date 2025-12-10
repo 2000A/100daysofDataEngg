@@ -81,6 +81,49 @@ Coding order and Execute Order
 
 <img width="983" height="645" alt="Screenshot 2025-12-09 150017" src="https://github.com/user-attachments/assets/3257f5c2-4901-4a54-a615-4aecbce1ce9b" />
 
+----------------------------------------------------------------------
+DDL commands -> CREATE, ALTER, DROP
+
+DDL commands never return data it is changing the structure of database
+CREATE TABLE commands here creates the table in database.
+
+ALTER means to edit the defination of table
+
+Adding columns : The new columns are appended at the end of table by default.
+
+ALTER Table When ADD we provide column name with data type and constraint (its new column thats why)
+
+And for DROP COLUMN we provide only column name.
+
+--------------------------------------------------------------------
+
+DML - Modify(manipulate) Your Data
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
