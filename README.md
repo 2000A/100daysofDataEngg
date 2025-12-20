@@ -135,6 +135,63 @@ After combining we have three possibilites
 <img width="880" height="234" alt="Screenshot 2025-12-20 062138" src="https://github.com/user-attachments/assets/f75d0de0-6283-4888-9465-704485d07d6b" />
 
 
+1. No Joins
+-> all data from both tables without joining them.
+
+2. INNER JOIN
+   imp: order of table does not matter here
+   
+-> An inner join returns only the matching rows from both tables. This means that only data from Table A that has an overlapping match with Table B will be shown, and only the data from Table B that matches Table A will be included in output.
+   
+3. LEFT JOIN
+-> Returns All rows from left and Only Matching from Right.
+   left table has more priority (we want to see all data)
+   and right table we need for additional data ( that only matching)
+
+<img width="863" height="482" alt="Screenshot 2025-12-20 153930" src="https://github.com/user-attachments/assets/1a90a648-9ec1-4ab7-922d-15040de6aa8c" />
+
+Imp: The order of tables is IMPORTANT
+
+4. RIGHT JOIN (Try to skip it :)
+   
+-> Returns All Rows from Right and Only Matching from left.
+<img width="889" height="459" alt="Screenshot 2025-12-20 160737" src="https://github.com/user-attachments/assets/fc19dfcb-f88f-4077-ba37-b260d3fc9b8e" />
+
+Alternative: 
+<img width="756" height="455" alt="Screenshot 2025-12-20 161612" src="https://github.com/user-attachments/assets/ffbd1cfa-8bd9-4dad-a83a-afdb727102f5" />
+
+5. FULL JOIN
+-> Returns All Rows from Both Tables.
+
+<img width="879" height="449" alt="Screenshot 2025-12-20 163352" src="https://github.com/user-attachments/assets/344ebef3-304e-4bde-aa2e-1f0ed8a9b406" />
+
+use cases when and where Joins can be used or will be helpful:
+
+<img width="811" height="463" alt="Screenshot 2025-12-20 163805" src="https://github.com/user-attachments/assets/c1dd4313-0996-4947-9332-d9904852dc3b" />
+
+ADVANCE JOIN
+-> Here we get the unmatch rows of all joins
+
+1. LEFT ANTI JOIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
