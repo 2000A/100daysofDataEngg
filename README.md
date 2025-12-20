@@ -98,16 +98,41 @@ And for DROP COLUMN we provide only column name.
 --------------------------------------------------------------------
 
 DML - Modify(manipulate) Your Data
+select, insert, update, delete to retreive, add, modify, and remove data.
+ --------------------------------------------------------------------
 
- 
+ SQL JOINS
+ 1. Rows Join - Same Column
+ 2. Column Join - Key(same column in both table)
+
+Why do we use joins?
+
+1. Recombine Data:
+   Data of Customers is spread accross different table so to get Big Picture we Join all tables.
+   We will connecct all the four tables to get one big picture of customers.
+   
+<img width="893" height="407" alt="Screenshot 2025-12-20 060514" src="https://github.com/user-attachments/assets/bdaf9562-9379-4bf1-a7b9-b4e4163d1c12" />
 
 
+2.Data Enrichment "Getting Extra Data"
 
+Say we have one Master Table of Customers and now we want extra information about country zip code here we'll take help of another table called Reference Table and add zip code data to our master table.
 
+<img width="859" height="387" alt="Screenshot 2025-12-20 061008" src="https://github.com/user-attachments/assets/c03fd54c-22d0-42eb-b974-cd71ff210320" />
 
+3. Check for Existence "Filtering"
 
+We have Customers master table and say I want customers who have made orders. For that we use a Lookup Table which acts as filter.
+We will join the two table and here we will not add data to customers table we will filter out customers those that didn't make orders.
 
+To check existence of your records in another table 
 
+<img width="901" height="368" alt="Screenshot 2025-12-20 061656" src="https://github.com/user-attachments/assets/5a5d3164-f83a-4bad-84c1-faeda5eeff7a" />
+
+Join Types:
+After combining we have three possibilites
+
+<img width="880" height="234" alt="Screenshot 2025-12-20 062138" src="https://github.com/user-attachments/assets/f75d0de0-6283-4888-9465-704485d07d6b" />
 
 
 
