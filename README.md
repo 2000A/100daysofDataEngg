@@ -174,13 +174,20 @@ ADVANCE JOIN
 
 1. LEFT ANTI JOIN
 
+<img width="854" height="466" alt="Screenshot 2025-12-20 224816" src="https://github.com/user-attachments/assets/5b267eaa-2139-4c4a-9d92-efd34e966c9d" />
 
+2. RIGHT ANTI JOIN
 
+<img width="898" height="510" alt="Screenshot 2025-12-20 225945" src="https://github.com/user-attachments/assets/d00bc380-1228-441a-a1e8-d2d3f9409ac7" />
 
+Alternative to right anti join using left anti join 
 
+<img width="818" height="473" alt="Screenshot 2025-12-20 230436" src="https://github.com/user-attachments/assets/ba7fe527-1ba0-449d-b6d1-366af62f9563" />
 
+3. FULL ANTI JOIN
+ order of tables doesn't matter.
 
-
+<img width="902" height="464" alt="Screenshot 2025-12-20 231536" src="https://github.com/user-attachments/assets/8452e96b-fd22-4cbb-b0f2-b56caf21eefc" />
 
 
 
