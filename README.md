@@ -189,11 +189,18 @@ Alternative to right anti join using left anti join
 
 <img width="902" height="464" alt="Screenshot 2025-12-20 231536" src="https://github.com/user-attachments/assets/8452e96b-fd22-4cbb-b0f2-b56caf21eefc" />
 
+Which join type to use :
 
+<img width="832" height="414" alt="Screenshot 2025-12-21 140456" src="https://github.com/user-attachments/assets/1a54c57e-8dd5-4f6d-8562-fee104b7241b" />
 
+Multi table join:
+When there is main table and you want extra information from other tables then go with left join to all the tables to master table
 
+<img width="773" height="419" alt="Screenshot 2025-12-21 140827" src="https://github.com/user-attachments/assets/5cd9f23d-8cb2-45f9-b278-aefc72577e47" />
 
-
+But when there is no such thing as master table all table are equal
+then go with inner join 
+<img width="469" height="455" alt="Screenshot 2025-12-21 141240" src="https://github.com/user-attachments/assets/4309f177-8521-47d7-b0ec-05706b7bfeb9" />
 
 
 
