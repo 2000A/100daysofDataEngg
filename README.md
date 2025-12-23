@@ -202,10 +202,93 @@ But when there is no such thing as master table all table are equal
 then go with inner join 
 <img width="469" height="455" alt="Screenshot 2025-12-21 141240" src="https://github.com/user-attachments/assets/4309f177-8521-47d7-b0ec-05706b7bfeb9" />
 
+SET Operators(row joining join)
+
+#1 RULE | SQL CLAUSES
+- SET Operator can be used almost in all cluases
+  WHERE | JOIN | GROUP BY | HAVING
+- ORDER BY is allowed only once at the end of query
+  (means it cannot be used in first query it can only be used in then end of second query)
+
+<img width="859" height="488" alt="Screenshot 2025-12-23 151010" src="https://github.com/user-attachments/assets/11538d32-82d5-45da-9ce2-23605fe3f538" />
+
+#2 RULE | NUMBER OF COLUMNS
+- The number of columns in each query must be the same.
+
+#3 RULE | DATA TYPES
+- Data types of columns in each query must be compatible.
+
+#4 RULE | ORDER OF COLUMNS
+-The order of the columns in each query must be the same.
+
+#5 RULE | COLUMN ALIASES
+-The column names in the result set are determined by the columns names specified in the first query.
+
+#6 RULE | CORRECT COLUMNS
+-Even if all rules are met and SQL shows no errors, the result may be incorrect.
+- Incorrect column selection leads to inaccurate results.
+
+1. UNION
+- Returns all distinct rows from both queries.
+- Removes duplicates rows from the result.
+- Order of queries does not matter in UNION operator
+
+2. UNION ALL
+- Returns all rows from both queries, including duplicates.
+
+UNION ALL vs UNION 
+- UNION ALL is genrally faster than UNION
+  (if you're confident there are no duplicates, use UNION ALL)
+  
+- Use UNION ALL to find duplicates and quality issues
+
+3. EXCEPT
+- Returns all distinct rows from the first query that are anot found in the second query.
+
+  In simple Returns unique rows in the 1st table that are not in 2nd table
+  - The order of queries in a EXEPT does affect ther result!!
+    why?
+    say 1st query customers so we get customers that are not employee
+    when 1st query employee so we get employee that are not customers.
+  
+4. INTERSECT
+-Returns only the rows that are common in both queries.
+can be used to find the employees, who are also customers.
+
+How to use SET operators in Data Analysis:
+->
+<img width="508" height="448" alt="Screenshot 2025-12-23 170819" src="https://github.com/user-attachments/assets/b4ecf3bd-27a5-4143-aa05-e89f9c093987" />
 
 
 
+<img width="837" height="474" alt="Screenshot 2025-12-23 170800" src="https://github.com/user-attachments/assets/d9e7e7f7-3281-4d16-b9ab-825e98492cda" />
 
+
+* Database developers divide the data into multiple tables to optimize performance and archive old data.
+
+<img width="811" height="466" alt="Screenshot 2025-12-23 173840" src="https://github.com/user-attachments/assets/18ab5617-aa4a-4780-bb61-c1fe0d5b72bc" />
+
+very important : mapping data blindly using * 
+best practice: never use select * while using set operator  WHY? Schema changes with time
+
+first clearly list all columns
+second method: source flag
+           Include additional column to indicate the source of each row
+
+above examples were of union operator.
+
+EXCEPT USE CASES
+- DELTA DETECTION : Identifying the differences or changes (delta) between two batches of data.
+
+<img width="993" height="425" alt="Screenshot 2025-12-23 181920" src="https://github.com/user-attachments/assets/099402fd-0ae6-4ecd-8c10-f8e24bab294e" />
+
+-DATA COMPLETENESS CHECK
+
+example data migration from one database to other database 
+
+<img width="666" height="374" alt="Screenshot 2025-12-23 182352" src="https://github.com/user-attachments/assets/9489d659-5e1b-4fc2-bd37-e3075a2cff9e" />
+
+<img width="671" height="461" alt="Screenshot 2025-12-23 182601" src="https://github.com/user-attachments/assets/e362a538-417d-413d-bb03-e1d2977d5a55" />
 
 
 
