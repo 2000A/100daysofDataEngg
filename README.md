@@ -290,6 +290,28 @@ example data migration from one database to other database
 
 <img width="671" height="461" alt="Screenshot 2025-12-23 182601" src="https://github.com/user-attachments/assets/e362a538-417d-413d-bb03-e1d2977d5a55" />
 
+---------------------------------------------------------------------
+ROW LEVEL FUNCTIONS
+
+1. Single-Row Functions : one input/row value and one result
+   ex: 'MARIA' ----> LOWER() ----> 'maria'
+3. Multi-Row Functions: multiple rows as input and single output
+   30--->
+   10--->      SUM() ----> 100
+   20--->
+   40--->
+
+
+                          SQL Functions
+   (Row-Level-Calculation)                     (Aggregations)
+   single-row                                   multi-row
+   functions                                    functions
+
+   string     Numeric                   Aggregate          Window
+   functions  functions                 functions         functions
+                                         (Basics)         (Advanced)
+   Date & Time  NULL
+   functions    functions
 
 
 
