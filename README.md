@@ -314,20 +314,23 @@ ROW LEVEL FUNCTIONS
    functions    functions
 
 
+String Functions:
 
+<img width="787" height="477" alt="Screenshot 2025-12-24 133635" src="https://github.com/user-attachments/assets/dda87899-a52e-438c-aa72-c218abf56636" />
 
+trick used in SUBSTRING() method to find last character position dynamically.
+<img width="1026" height="692" alt="Screenshot 2025-12-24 132232" src="https://github.com/user-attachments/assets/072bdca0-4e63-4135-a9ba-a2bc9bdf6f05" />
 
+NUMBER FUNCTIONS
+1. ROUND()
+2. ABS() - say we have mistake in database say minus sales which mean nothing which can be changed using ABS()
 
+DATE & TIME FUNCTIONS:
+- In sql server timestamp data type is called as DATETIME 
 
+<img width="807" height="407" alt="Screenshot 2025-12-24 143602" src="https://github.com/user-attachments/assets/a397f207-8314-458c-ac9d-efa462eeefc1" />
 
-
-
-
-
-
-
-
-
-
+Three different sources to query DATE:
+1. Date Column from Table 
 
 
