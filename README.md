@@ -333,5 +333,52 @@ DATE & TIME FUNCTIONS:
 Three different sources to query DATE:
 1. Date Column from Table 
 2. hardcoded
-3. from system 
+3. from system GETDATE()
+   
+Database	Date + Time	Date Only
+
+MySQL	NOW()	           CURDATE()
+PostgreSQL	NOW()	           CURRENT_DATE
+SQL Server	GETDATE()	           CAST(GETDATE() AS DATE)
+Oracle	SYSDATE	           TRUNC(SYSDATE)
+SQLite	DATETIME('now')	DATE('now')
+BigQuery	CURRENT_DATETIME()	CURRENT_DATE()
+Snowflake	CURRENT_TIMESTAMP()	CURRENT_DATE()
+
+
+<img width="889" height="482" alt="Screenshot 2025-12-25 074428" src="https://github.com/user-attachments/assets/7a8534f5-beeb-4314-96fc-07c39b31f804" />
+
+** Part Extraction
+-> DAY, MONTH, YEAR, DATEPART, DATENAME, DATETRUNC, EOMONTH
+
+<img width="615" height="494" alt="Screenshot 2025-12-25 084656" src="https://github.com/user-attachments/assets/d12f8148-f499-45a5-9ba4-b9bb2d9b8141" />
+
+<img width="704" height="461" alt="Screenshot 2025-12-25 101714" src="https://github.com/user-attachments/assets/7ced4fd7-c1ce-4609-aad2-543004af49f1" />
+
+DATEPART(part, date) : can extract week, quarter and all day month year
+
+DATENAME(part, date) : To get Name like January, and for year and day they are numbers only but datatype is STRING only
+
+DATETRUNC(part, date) : To Truncate the part of date.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
