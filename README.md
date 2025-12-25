@@ -332,5 +332,6 @@ DATE & TIME FUNCTIONS:
 
 Three different sources to query DATE:
 1. Date Column from Table 
-
+2. hardcoded
+3. from system 
 
