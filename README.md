@@ -360,9 +360,11 @@ DATEPART(part, date) : can extract week, quarter and all day month year
 DATENAME(part, date) : To get Name like January, and for year and day they are numbers only but datatype is STRING only
 
 DATETRUNC(part, date) : To Truncate the part of date.
+-time part gets reset to 00 while day and month part reseted to 01.
 
+<img width="903" height="301" alt="Screenshot 2025-12-26 120214" src="https://github.com/user-attachments/assets/8bd82cb4-7715-4940-a905-13caef354e88" />
 
-
+Why datetrunc() is amazing function for data analytics:
 
 
 
