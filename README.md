@@ -357,7 +357,7 @@ Snowflake	CURRENT_TIMESTAMP()	CURRENT_DATE()
 
 DATEPART(part, date) : can extract week, quarter and all day month year
 
-DATENAME(part, date) : To get Name like January, and for year and day they are numbers only but datatype is STRING only
+DATENAME(part, date) : To get Name like January, and for year and day they are numbers only but datatype is STRING only(extracts the part of date and names the part extracted for month say january, feburary like that)
 
 DATETRUNC(part, date) : To Truncate the part of date.
 -time part gets reset to 00 while day and month part reseted to 01.
@@ -365,6 +365,73 @@ DATETRUNC(part, date) : To Truncate the part of date.
 <img width="903" height="301" alt="Screenshot 2025-12-26 120214" src="https://github.com/user-attachments/assets/8bd82cb4-7715-4940-a905-13caef354e88" />
 
 Why datetrunc() is amazing function for data analytics:
+
+Say we want to count the no. of orders based on creation time.
+We can use datetrunc() to get monthly orders , yearly orders, or we can get into more granuality like minutes, hours also.
+
+<img width="620" height="398" alt="Screenshot 2025-12-27 195635" src="https://github.com/user-attachments/assets/f983fa94-b1ca-4d84-b2cc-4f36f2f06807" />
+We can go to higest granuality to lowest granuality of details
+
+** EOMONTH(date) :Returns the last day of month
+
+ex:  2025-08-20 ------EOMONTH(date)------> 2025-08-31
+How will i get the start date of month? 
+DATETRUNC(month, CreationTime) StartOfMonth will reset the day to 1 easy
+
+**PART EXTRACTION USE CASES:
+Why do need date parts why and where it can be useful in data analysis.
+
+1. Data Aggregations/Reporting
+-> Sometime we aggreate data by a specific time unit
+   like data based by year, or drilling it down more aggregate the data by quarter, or aggregate by month
+
+<img width="250" height="250" alt="Screenshot 2025-12-27 201220" src="https://github.com/user-attachments/assets/40b9aa42-8b40-4fe7-8a8a-d63cc61118a6" />
+
+<img width="250" height="250" alt="Screenshot 2025-12-27 201229" src="https://github.com/user-attachments/assets/17cd431a-4dea-4f48-bc3e-d5bc3eca3abd" />
+
+<img width="250" height="250" alt="Screenshot 2025-12-27 201240" src="https://github.com/user-attachments/assets/3f8880ab-c8e8-4cdb-a5f5-83ce94736d79" />
+
+2. Date Filtering:
+Say we have monthly orders but we want all orders that were placed during the month of February.
+
+* Best practice: Filtering data using an integer is faster than using a String.
+
+FUNCTION COMPARISIONS: 
+
+<img width="300" height="300" alt="Screenshot 2025-12-27 204318" src="https://github.com/user-attachments/assets/ea795265-8765-4c76-a22b-00458bf7fec7" />
+
+<img width="838" height="458" alt="Screenshot 2025-12-27 204444" src="https://github.com/user-attachments/assets/de7db058-3057-42a3-9ea1-07b4e4e4c206" />
+
+
+🚀Formating & Casting :
+
+<img width="400" height="200" alt="Screenshot 2025-12-27 205314" src="https://github.com/user-attachments/assets/4c3917ea-73cd-4932-9466-f92adc13a2d1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
