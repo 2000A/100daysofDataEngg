@@ -424,31 +424,56 @@ FORMAT(OrderDate, 'dd/MM/yyy', 'ja-JP')
 
 FORMAT(1234.55, 'D', 'fr-FR')
 
+Formatting Use Case:
+
+1. Data Aggregations: format the date before doing aggregations.
+   
+   <img width="200" height="200" alt="Screenshot 2025-12-28 141147" src="https://github.com/user-attachments/assets/42739aa5-6924-4d1f-babd-944602fcd5a6" />
+
+The level of details is to high like for each day we have one order
+<img width="250" height="250" alt="Screenshot 2025-12-28 141501" src="https://github.com/user-attachments/assets/b76cc84b-87db-4041-a443-a1ec22f261e4" />
+
+We have learned in Datepart() inorder to extract one part and aggregate on it. Instead of that we will change the format using FORMAT(oRDERdATE, 'MMM yy').
+Its like the datepart but we are customizing the format as we want.
+Like datepart we can FORMAT() to change granuality of the date for data aggregation.
+<img width="250" height="250" alt="Screenshot 2025-12-28 141950" src="https://github.com/user-attachments/assets/69f48d87-8955-46c7-9fb3-762ebd482fa6" />
+
+2. Data Standardization:
+   In our project we get data from multiple sources like csv file, API calls and Database from these sources we may get different formats of date which we store in central repository here we store all different dates in standard format.
+   
+<img width="300" height="300" alt="Screenshot 2025-12-28 143554" src="https://github.com/user-attachments/assets/a6236d21-4b70-4745-b366-0cf400e9a19a" />
 
 
+ALL Date formats:
+
+<img width="746" height="467" alt="Screenshot 2025-12-28 143642" src="https://github.com/user-attachments/assets/3eb8eef9-3c8a-4bb1-a7cd-8895ebe5d549" />
+
+All Number formats:
+<img width="739" height="370" alt="Screenshot 2025-12-28 143737" src="https://github.com/user-attachments/assets/b7fd1118-253b-4fa2-bd32-dbc854c34425" />
 
 
+CONVERT():
+Converts a date or time value to a different data type & Formats.
 
+syntax: CONVERT(data_type, value [,style]) last parameter optional
 
+CONVERT( INT, '123')
+CONVERT(VARCHAR, OrderDate, '34') 
+** Default Style = 0
 
+ CONVERT() function can change datatype and format as well.
 
+<img width="893" height="493" alt="Screenshot 2025-12-28 145837" src="https://github.com/user-attachments/assets/0df168f4-08a2-4e1e-ac87-da0772d648ff" />
+***
+CAST() : Converts a value to a specified data type.
 
+CAST(value AS data_type)
 
+CAST('123' AS INT)
+CAST('2025-08-20' AS DATE)
+** No format can be specified**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="788" height="445" alt="Screenshot 2025-12-28 150545" src="https://github.com/user-attachments/assets/98c318b0-d996-46ae-98c3-15d4814a01f8" />
 
 
 
