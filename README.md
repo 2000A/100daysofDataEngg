@@ -407,7 +407,22 @@ FUNCTION COMPARISIONS:
 
 <img width="400" height="200" alt="Screenshot 2025-12-27 205314" src="https://github.com/user-attachments/assets/4c3917ea-73cd-4932-9466-f92adc13a2d1" />
 
+Formating: We change the how the value look like.
+<img width="350" height="350" alt="Screenshot 2025-12-28 132419" src="https://github.com/user-attachments/assets/eb52f947-6f67-4152-a763-71f52d503794" />
 
+Casting: Change the Data Types.
+
+<img width="350" height="350" alt="Screenshot 2025-12-28 132622" src="https://github.com/user-attachments/assets/e8e922fe-406a-400b-b734-9082143e5ad8" />
+
+FORMAT() : FUNCTION Formats a date or time value.
+
+FORMAT(value, format [,cultuer]) third is optional.
+
+FORMAT(OrderDate, 'dd/MM/yyyy') (most used one )
+
+FORMAT(OrderDate, 'dd/MM/yyy', 'ja-JP')
+
+FORMAT(1234.55, 'D', 'fr-FR')
 
 
 
