@@ -476,6 +476,68 @@ CAST('2025-08-20' AS DATE)
 <img width="788" height="445" alt="Screenshot 2025-12-28 150545" src="https://github.com/user-attachments/assets/98c318b0-d996-46ae-98c3-15d4814a01f8" />
 
 
+DATE CALCULATIONS
+
+1. DATEADD() : Adds or subracts a specific time interval to/from a date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
