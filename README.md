@@ -480,26 +480,50 @@ DATE CALCULATIONS
 
 1. DATEADD() : Adds or subracts a specific time interval to/from a date
 
+DATEADD(part, interval, date)
+first parameter ie part means year, month, days and second parameter interval means how many months, how many years to be added or subracted and lastly we pass date.
 
+<img width="400" height="400" alt="Screenshot 2025-12-29 052557" src="https://github.com/user-attachments/assets/32d9849e-b4cc-4bff-9ac9-8c0af5ab3541" />
 
+DATEADD(year, 2 , OrderDate)
+here we will manipulate year we will add 2 years to every OrderDate
 
+DATEADD(month, -4, OrderDate)
+here we will manipulate month and subtract 4 month from every month from OrderDate.
 
+Conclusion : By passing positive or negative interval to DATEADD()
+we can add or subtract any given DATE.
 
+DATEDIFF(): Find the difference between two dates.
 
+DATEDIFF(part, start_date, end_date)
 
+-> part finds difference between years, months, days and start_date is oldest date and end_date is yongest date.
 
+DATEDIFF(year, OrderDate, ShipDate)
 
+DATEDIFF() IS VERY IMPORTANT/HELPFUL IN DATA ANALYSIS.
 
+** Time Gap Analysis
+If we want to find the number of days between each order and the previous order.
+And if we don't have any column that previous orders data then we will go use *Window Function* LAG()
 
+LAG() : Access a value from the previous row.
+**
+Date Validation
+-> ISDATE() : Check if a value is a date. 
+Returns 1 if the string value is a valid date and 0 for not valid date
 
+ISDATE(value)
 
+ISDATE('2025-08-20') OUTPUTS : 1
+ISDATE(2025) OUTPUTS: 1 (for integer okay)
+SQL understands year and standard date format be it inside a string it will accept.
 
+<img width="723" height="433" alt="Screenshot 2025-12-29 095354" src="https://github.com/user-attachments/assets/b1a00f8d-3a6a-4313-9242-68e9b5a6b55a" />
 
-
-
-
-
-
+using WHERE in last we can get all string values that are invalid
+it helps in identifying issues , quality checks.
 
 
 
