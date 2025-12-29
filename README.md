@@ -525,22 +525,146 @@ SQL understands year and standard date format be it inside a string it will acce
 using WHERE in last we can get all string values that are invalid
 it helps in identifying issues , quality checks.
 
+-----------------------------------------------------------------------
+
+NULL Functions| COALESCE, ISNULL, NULLIF, IS(NOT) NULL
+
+<img width="400" height="400" alt="Screenshot 2025-12-29 131347" src="https://github.com/user-attachments/assets/9299a6fb-2668-4238-84d0-941d61ddcc83" />
+
+WHEAT is NULL?
+NULL means nothing, unknown!
+NULL is not equal to anything!
+
+-NULL is not zero
+-NULL is not empty string
+-NULL is not blank space
+
+NULL FUNCTIONS:
+Here we will handle NULL using NULL functions.
+
+<img width="400" height="400" alt="Screenshot 2025-12-29 131938" src="https://github.com/user-attachments/assets/0d72b01e-81be-4c54-afcd-3819fffd2ee2" />
+
+Replace values:
+           to replace NULL with value we have ISNULL & COALESCE                   functions.
+           And to replace a Value with NULL we have NULLIF function.
+Check for NULLS: Functions gives boolean values.
+           IS NULL &  IS NOT NULL
+
+ISNULL() : Replaces 'NULL' with a specified value.
+
+ISNULL(value, replacement_value)
+
+example: ISNULL(Shipping_Address, 'unknown')
+We have a column Shipping_Address and if NULL present anywhere in this column will get replaces with static value 'unknown' which is default value or else we can replace with anything we want.
+
+Another example where replacing NULL with a column:
+ISNULL(Shipping_Address, Billing_Address) <--- Here Billing_Address                                                   will be replaced with                                             NULL in shipping address col.
+Having a default replacement value will not give NULL in output as below example:
+<img width="300" height="300" alt="Screenshot 2025-12-29 135228" src="https://github.com/user-attachments/assets/541ca5cd-a698-4a20-a175-4c60b708b82c" />
+
+And Having a column as replacement will not garuntee value to the output as replacement column can also have NULL present in their columns:
+<img width="300" height="300" alt="Screenshot 2025-12-29 140141" src="https://github.com/user-attachments/assets/0de1c8a5-b49d-4066-b1b8-a32b65772d0d" />
+
+Better version than ISNULL() function is COALESCE()
+* COALESCE()
+  Returns the first non-null value from a list.
+COALESCE(vlaue1, value2, value3, ....)
+
+COALESCE(Shipping_Address, 'unknown')
+
+COALESCE(Shipping_Address, Billing_Address)
+
+COALESCE(Shipping_Address, Billing_Address, 'Unknown')
+
+COALESCE() stops when it encounters the first non null value.
+
+<img width="400" height="400" alt="Screenshot 2025-12-29 141434" src="https://github.com/user-attachments/assets/46691da0-56d6-47a5-b52b-30dc42a2bafb" />
+
+<img width="400" height="400" alt="Screenshot 2025-12-29 141609" src="https://github.com/user-attachments/assets/7aadf078-6b67-4a34-8295-87b006047104" />
 
 
+<img width="250" height="250" alt="Screenshot 2025-12-29 154211" src="https://github.com/user-attachments/assets/68e13974-e0d1-4a53-bd78-1bb618a45177" />
+
+** ISNULL | COALESCE
+(USE CASE)
+1.Handle the NULL before doing data aggregations.
+
+<img width="300" height="300" alt="Screenshot 2025-12-29 154532" src="https://github.com/user-attachments/assets/415c1057-2d7c-404f-b97b-53aa95ebe0c6" />
+
+<img width="300" height="300" alt="Screenshot 2025-12-29 154605" src="https://github.com/user-attachments/assets/9ce5ae4b-b1c9-4dbb-9284-adffa47a40de" />
+
+2. Mathematical Operations
+   Handle the NULL before doing mathematcial operations.
+    NULL + 5 => NULL
+    NULL + 'b' => NULL
+
+3. Handle the NULL before JOINING tables.  
+
+<img width="450" height="470" alt="Screenshot 2025-12-29 162550" src="https://github.com/user-attachments/assets/fe7f7356-28a6-49ac-818a-f34a4ed63c99" />
+
+We have to handle the NULL on the joins and not changing the value in select as below example:
+
+<img width="450" height="437" alt="Screenshot 2025-12-29 162917" src="https://github.com/user-attachments/assets/0929014e-5691-4df1-b8e8-2ed8b2dd208b" />
 
 
+4. Sorting data
+-> Handle the NULL before sorting data.
+  Since, NULL means nothing in ASC order 'NULL' Appears atop and during DESC it appears as lowest value and appears at last  
 
+<img width="200" height="200" alt="Screenshot 2025-12-29 163220" src="https://github.com/user-attachments/assets/7acfc0fc-b4f2-4ba5-97ec-ddc7318832ea" />
 
+<img width="200" height="200" alt="Screenshot 2025-12-29 163245" src="https://github.com/user-attachments/assets/4954af9f-cbfa-44aa-aa34-dcecc0d4dd21" />
 
+**
+NULLIF() - accepts two parametrs
+Compares two expressions returns:
+-NULL, if they are equal.
+-First Value, if they are not equal.
 
+NULLIF(value1, value2)
 
+NULLIF(Shipping_Address, 'unknown')
 
+NULLIF(Shipping_Address, Billing_Address)
 
+Example 1 where NULLIF() is benificial it goes like replace -1 in price column with NULL as -1 is not good for anaylsis.
+- We are generally replacing a value with NULL using NULLIF()
 
+<img width="854" height="358" alt="Screenshot 2025-12-29 171505" src="https://github.com/user-attachments/assets/b0b306a2-8687-4743-aa0b-21b59725c02d" />
 
+Example 2 Where we compare two columns Original_price and Discount_Price comparing these to analyse flaw in our code like where discount on product has flaw.
 
+<img width="892" height="348" alt="Screenshot 2025-12-29 171834" src="https://github.com/user-attachments/assets/454b0f62-ffbc-4adf-85c4-a87868bd02a9" />
 
+Just using it for quick check for matching data.
 
+USE CASE - NULLIF()
+1. Preventing the error of dividing by zero
+
+** 
+IS NULL : Returns TRUE if the value IS NULL or else returns FALSE
+Value IS NULL
+
+IS NOT NULL : Returns TRUE if the value IS NOT NULL, Otherwise it returns FALSE.
+Value IS NOT NULL
+
+<img width="400" height="400" alt="Screenshot 2025-12-29 171834" src="https://github.com/user-attachments/assets/dc6f3158-88c0-4a62-bd2a-063825362e25" />
+
+<img width="400" height="400" alt="Screenshot 2025-12-29 172606" src="https://github.com/user-attachments/assets/848aefdf-1da4-4f93-861b-6c3c7fc7cfcc" />
+
+USE CASES of IS NULL | IS NOT NULL
+1. Filtering Date
+Searching for missing information or NULL
+
+2. ANTI JOINS
+   -  LEFT ANTI JOIN | RIGHT ANTI JOIN
+   -  Finding the unmatched rows between two tables.
+
+<img width="729" height="511" alt="Screenshot 2025-12-29 174049" src="https://github.com/user-attachments/assets/db24ab86-bfbb-40b1-a8ce-8517180de896" />
+
+<img width="847" height="335" alt="Screenshot 2025-12-29 174559" src="https://github.com/user-attachments/assets/17d46d0e-e56a-4717-a701-2a429a0718b7" />
+
+ON part use right value ie o.customer_id to check IS NULL alsways but order_id could also have been used and we would get same result.
 
 
 
