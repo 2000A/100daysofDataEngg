@@ -668,7 +668,122 @@ ON part use right value ie o.customer_id to check IS NULL alsways but order_id c
 ---------------------------------------------------------------------
 NULL VS EMPTY STRING VS BLANK SPACE
 
-NULL - means nothing "unkown"       EMPTY STRING - 
+NULL - means nothing "unkown"       EMPTY STRING - Is a zero character
+
+Blank spaces - are evil in database (Are string value has one or more space characters.
+
+<img width="400" height="489" alt="Screenshot 2025-12-30 145805" src="https://github.com/user-attachments/assets/1844f5d4-ded6-4db8-ba37-d5513de3ef1f" />
+
+** HANDLING NULLS**
+DATA POLICIES : Set of rules that defines how data should be handled.
+
+#1 Only use NULLs and empty string, but avoid blank spaces.
+Tip: use TRIM() function to remove unwanted leading and trailing spaces from a string.
+
+
+#2 Only use NULLs and avoid using empty strings and blank spaces.
+Tip: use NULLIF(Trim(value),'') to convert empty string and blank spaces to NULL
+
+#3 Use the default value 'unknown' and avoid using nulls, empty strings, and blank spaces.
+TIP: CALESCE(NULLIF(Trim(value),''), 'unknown') 
+
+NOTE: AVOID POLICY 1 ALWAYS
+
+#2 Data policy (use case):
+Replacing empty strings and blanks with NULL during data preparation before inserting into a data base to optimise storage and performance.
+- it reduces memory space
+
+#3 Data policy (use case):
+Replacing empty strings, blanks, NULL with default value during data preparation before using it in reporting to improve readiblity and reduce confusion. example powerbi presentation
+-used for better presentation
+
+<img width="832" height="493" alt="Screenshot 2025-12-30 155841" src="https://github.com/user-attachments/assets/05a3f0bb-279c-419f-9ff9-cb6d01a672b5" />
+
+----------------------------------------------------------------------
+
+CASE STATEMENT
+
+Case statement in SQL help writing conditional logic inside sql query 
+which evaluates a list of conditions step by step and returns value when first condition is met.
+
+syntax:
+<img width="791" height="456" alt="Screenshot 2025-12-30 164504" src="https://github.com/user-attachments/assets/ae98e757-8673-4f06-9909-644741fe9d73" />
+important to note that if we use ELSE statement we get no NULLs in output.
+
+
+<img width="791" height="456" alt="Screenshot 2025-12-30 164504" src="https://github.com/user-attachments/assets/ba025196-5ab8-43d5-b225-8deceebe6fad" />
+
+<img width="697" height="410" alt="Screenshot 2025-12-30 164759" src="https://github.com/user-attachments/assets/a5af779f-12ed-4efc-bf2d-4b4285870c54" />
+
+<img width="848" height="484" alt="Screenshot 2025-12-30 171536" src="https://github.com/user-attachments/assets/2141d133-ad76-4f5c-817e-38173e9736d5" />
+
+
+Use cases of case statements:
+
+Main purpose is Data Transformation
+
+In data transformation we create new columns based on existing data.
+
+1. Categorizing data
+   Group the data into different categories based on certain              conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
