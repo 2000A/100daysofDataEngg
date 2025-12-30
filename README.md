@@ -665,9 +665,10 @@ Searching for missing information or NULL
 <img width="847" height="335" alt="Screenshot 2025-12-29 174559" src="https://github.com/user-attachments/assets/17d46d0e-e56a-4717-a701-2a429a0718b7" />
 
 ON part use right value ie o.customer_id to check IS NULL alsways but order_id could also have been used and we would get same result.
+---------------------------------------------------------------------
+NULL VS EMPTY STRING VS BLANK SPACE
 
-
-
+NULL - means nothing "unkown"       EMPTY STRING - 
 
 
 
