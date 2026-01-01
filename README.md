@@ -726,41 +726,65 @@ In data transformation we create new columns based on existing data.
 
 1. Categorizing data
    Group the data into different categories based on certain              conditions.
+   ( main purpose is to do data transformations by generating new columns )
+
+ -> Generate a report showing the total sales for each category:
+ - High: if the sales higher than 50
+ - Medium: if the sales between 20 and 50
+ - Low: if the sales equal or lower thatn 20
+Sort the result from lowest to highest.
+
+** NOte: The datatypes of each result(of case statements) must be matching.
+(All cases (WHEN) and ELSE as well)
+
+**Rules : CASE statment can be used anywhere in the query
+
+USE CASE #2 : MAPPING VALUES
+- Transform the values from one form to another.
+
+Sometimes developers store  data and values inside the database as flags and scores like 0's and 1's because they are faster to use.
+But in analytics we use words for better readablity.
 
 
+<img width="300" height="300" alt="Screenshot 2026-01-01 091918" src="https://github.com/user-attachments/assets/d8d7c43b-0fd5-4f46-addd-c87d73f2ea18" />
+
+<img width="300" height="300" alt="Screenshot 2026-01-01 091931" src="https://github.com/user-attachments/assets/5b9f99c5-c38c-4b68-aa7a-037a6d2146d3" />
+
+example: Retrieve employee details with gender displayed as full text.
+
+example: Retrieve customes details with abbreviated country code.
+
+Quick trick:
+
+<img width="858" height="387" alt="Screenshot 2026-01-01 094300" src="https://github.com/user-attachments/assets/ba74d841-6d09-4a88-b138-8a62e2b6f0e5" />
+
+#3 USE CASE
+Handling NULLs
+-> Replace NULLs with a specific value. 
+-> NULLs can lead to inaccurate results, which can lead to wrong decision-making.
+
+example: Find the average scores of customers and treat NULLs as 0 And additional provide details such CustomerID & LastName.
 
 
+#4 USE CASE
+CONDITIONAL AGGREGATION
+- Apply aggregate functions only on subsets of data that fulfill certain conditions.
+
+example: Count how many times each customer has made an order with sales greater than 30
+
+Imp learning:
+1. FLAG: Binary indicator(1,0) to be summarized to show how many times the condition is true.
+
+step1: Create flag with binary values(0,1) to mark rows that meet certain criteria.
+
+step2: Summarize the binary flag
+
+CustomerID is the granuality for the aggregation.
+
+<img width="726" height="466" alt="Screenshot 2026-01-01 100853" src="https://github.com/user-attachments/assets/ed26c7bc-7042-45b0-b90e-bae92108ae7b" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+----------------------------------------------------------------------
 
 
 
