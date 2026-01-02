@@ -785,9 +785,10 @@ CustomerID is the granuality for the aggregation.
 
 
 ----------------------------------------------------------------------
+* SQL Aggregate Functions | COUNT, SUM, AVG, MAX, MIN
+ sql aggregate functions take multiple inputs and outputs one single     value.
 
-
-
+-> If we combine aggregate function together with the GROUP BY it will break those big numbers into more details based on columns that we are grouping by. (Amazing )
 
 
 
