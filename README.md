@@ -790,26 +790,39 @@ CustomerID is the granuality for the aggregation.
 
 -> If we combine aggregate function together with the GROUP BY it will break those big numbers into more details based on columns that we are grouping by. (Amazing )
 
+----------------------------------------------------------------------
+WINDOW FUNCTIONS
+Perform calculations(e.g. aggregations) on a specific amount of data,
+without losing the level of details of row.
 
+Below example we see how sql behaves when does aggregate for total sales for each product for normal aggregation using GROUP BY and WINDOW() function.
 
+<img width="882" height="469" alt="Screenshot 2026-01-03 072934" src="https://github.com/user-attachments/assets/fc6d50e9-93d0-4973-853e-02fc48acf80b" />
 
+Using group by we lose level of details. But with WINDOW() level of details remains same( called as Row-level calculatioins).
+ 
+<img width="750" height="367" alt="Screenshot 2026-01-03 074507" src="https://github.com/user-attachments/assets/7e00a8f1-20e7-4523-a597-995e56f19d08" />
 
+<img width="746" height="488" alt="Screenshot 2026-01-03 074557" src="https://github.com/user-attachments/assets/8a43738e-03a3-433a-a2a9-925d77dba0b9" />
 
+Groupt By used for Simple Data Analysis Whereas WINDOW() is used for Advanced Data Analysis.
 
+-WHY WE NEED WINDOW FUNCTIONS?
+-WHY GROUP BY IS NOT ENOUTH?
 
+Because at one point which comes when we want to do aggregations and provide additional details at same time which GROUP BY FAILS to provide.
 
+GROUP BY LIMITS: Can't do aggregations and provide details at same time.
 
+There comes WINDOW() for Rescue.
 
+<img width="765" height="401" alt="Screenshot 2026-01-03 082706" src="https://github.com/user-attachments/assets/d5ef3dbd-3e25-4e2d-94f7-32712c8a632b" />
 
+<img width="672" height="494" alt="Screenshot 2026-01-03 082831" src="https://github.com/user-attachments/assets/e7a607a9-b0d2-4857-88a7-1b4d6e9339ef" />
 
+<img width="803" height="485" alt="Screenshot 2026-01-03 082845" src="https://github.com/user-attachments/assets/5846122b-a9c6-4360-a42f-8664b13d2398" />
 
-
-
-
-
-
-
-
+<img width="820" height="477" alt="Screenshot 2026-01-03 084834" src="https://github.com/user-attachments/assets/94aecd3f-92f6-475d-b943-2efac543c42f" />
 
 
 
