@@ -887,61 +887,66 @@ Execution of PARTISION BY together with ORDER BY for the RANK():
 <img width="731" height="494" alt="Screenshot 2026-01-03 164829" src="https://github.com/user-attachments/assets/e41cf5ce-ea8a-43e5-bb12-0ca2a23e08e4" />
 
 
+<img width="840" height="511" alt="Screenshot 2026-01-03 193555" src="https://github.com/user-attachments/assets/4efd32dd-1ca5-422c-816c-ed8acfcbaeff" />
+
+** FRAME CLAUSE
+Defines a subset of rows within each window that is relevant for the calculation.
+
+<img width="400" height="391" alt="Screenshot 2026-01-03 200236" src="https://github.com/user-attachments/assets/c494a05e-83a6-4260-9af6-496d3699ffdb" />
+
+Syntax:
+<img width="812" height="516" alt="Screenshot 2026-01-03 200608" src="https://github.com/user-attachments/assets/0552430e-54e6-4c6d-807f-974b67f10744" />
+
+Example:
+
+<img width="600" height="488" alt="Screenshot 2026-01-03 200714" src="https://github.com/user-attachments/assets/64d1f32e-5509-46e8-91e3-10f1c6f248b3" />
+
+step 1:
+<img width="400" height="395" alt="Screenshot 2026-01-03 201050" src="https://github.com/user-attachments/assets/66d77124-9e98-4390-a654-f8c540bc153b" />
+
+step2:
+<img width="400" height="414" alt="Screenshot 2026-01-03 201141" src="https://github.com/user-attachments/assets/c47e9c9d-d639-468f-8589-3445cb3daf52" />
+
+step3:
+<img width="400" height="400" alt="Screenshot 2026-01-03 201215" src="https://github.com/user-attachments/assets/a246e998-4f77-433f-9935-d1ae18f63308" />
+
+step4:
+<img width="400" height="400" alt="Screenshot 2026-01-03 201300" src="https://github.com/user-attachments/assets/24cdb4fa-963b-4b26-b195-9247a04d122c" />
+
+Example of UNBOUNDED FOLLOWING
+
+<img width="400" height="400" alt="Screenshot 2026-01-03 201553" src="https://github.com/user-attachments/assets/a20fea48-b8bf-44b2-b9c5-99aec58e52cf" />
+
+<img width="400" height="400" alt="Screenshot 2026-01-03 201738" src="https://github.com/user-attachments/assets/61af13a9-495f-49fe-80a8-7f7d08ac5921" />
+
+<img width="400" height="400" alt="Screenshot 2026-01-03 201751" src="https://github.com/user-attachments/assets/985e90db-ea09-4ffd-a3d1-200175d20172" />
+
+<img width="400" height="400" alt="Screenshot 2026-01-03 201801" src="https://github.com/user-attachments/assets/612cf20a-7484-4692-8450-96ff83d0d27a" />
+
+<img width="400" height="400" alt="Screenshot 2026-01-03 201822" src="https://github.com/user-attachments/assets/dc0a9acc-ea77-473f-b56a-8f02cf1f6651" />
+
+example3:
+
+<img width="400" height="400" alt="Screenshot 2026-01-03 202034" src="https://github.com/user-attachments/assets/eba77c66-0f57-4176-a682-7be1b2cb3941" />
+
+<img width="478" height="312" alt="Screenshot 2026-01-03 202058" src="https://github.com/user-attachments/assets/e496b12a-0ac3-4846-8128-eac2eb74fa8f" />
+
+example 4:
+
+<img width="400" height="400" alt="Screenshot 2026-01-03 202158" src="https://github.com/user-attachments/assets/b0543d5c-4ab3-4da4-ab6b-17ed4606ffa9" />
+
+<img width="479" height="281" alt="Screenshot 2026-01-03 202357" src="https://github.com/user-attachments/assets/82a822fb-9d4e-4830-af25-a597e38530de" />
+
+<img width="540" height="285" alt="Screenshot 2026-01-03 202431" src="https://github.com/user-attachments/assets/ea83fc8c-a7dd-452d-86da-351608bd80cd" />
+
+<img width="492" height="331" alt="Screenshot 2026-01-03 202445" src="https://github.com/user-attachments/assets/aab2d640-4906-4789-bbfa-fb703c3837cf" />
 
 
+example 5:
+<img width="644" height="424" alt="Screenshot 2026-01-03 203907" src="https://github.com/user-attachments/assets/29d3c46d-ced3-4b17-84f2-687e01c821d4" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="694" height="439" alt="Screenshot 2026-01-03 204048" src="https://github.com/user-attachments/assets/2b510259-531d-4709-8e62-c7f966b0b4be" />
 
 
 
