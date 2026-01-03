@@ -825,6 +825,170 @@ There comes WINDOW() for Rescue.
 <img width="820" height="477" alt="Screenshot 2026-01-03 084834" src="https://github.com/user-attachments/assets/94aecd3f-92f6-475d-b943-2efac543c42f" />
 
 
+</> Window Syntax
+
+<img width="400" height="327" alt="Screenshot 2026-01-03 135415" src="https://github.com/user-attachments/assets/4a78e7a9-afa2-407f-8221-792ac3aac674" />
+
+f(x) WINDOW FUNCTIONS
+-> Perform calculations within a window
+
+FUNCTION EXPRESSION
+Arguments you pass to a function
+
+<img width="893" height="504" alt="Screenshot 2026-01-03 141754" src="https://github.com/user-attachments/assets/dfd93761-bf91-457f-bf92-7417a33e529e" />
+
+Datatypes acceptable to window functions:
+<img width="651" height="504" alt="Screenshot 2026-01-03 142107" src="https://github.com/user-attachments/assets/86959e3a-ce13-4b96-965e-3a3d3ee498d5" />
+
+OVER CALAUSE:
+Tells SQL that the function used is a window function.
+OR It defines a window or subset of data
+
+OVER() Keyword when specified SQL knows its not normal aggregation function its WINDOW(). Using OVER() we define a window.
+
++> Inside OVER() CLAUSE we have:
+                                 -PARTITION BY
+                                 -ORDER BY
+                                 -ROWS UNBOUNDED PRECEDING
+*PARTITION BY:
+-Very similar to GROUP BY
+-Divides the result set into partitions(Windows or groups)
+-Here we tell SQL how to divide our data.
+
+Ways in which PARTITION BY divides column:
+1. When we don't mention PARTITION BY i.e,SUM(Sales) OVER() then whole dataset is considered as window.
+
+2. SUM(Sales) OVER(PARTITION BY Product) then say will create two window and this time the aggregate function SUM(Sales) will not be applied on entire dataset this time it will applied on different window
+individually.( We will get Sum of window 1 and window 2 separately)
+
+<img width="475" height="475" alt="Screenshot 2026-01-03 144736" src="https://github.com/user-attachments/assets/d5eb01e1-57bf-4472-b366-dbcfb3d7d9c7" />
+
+<img width="500" height="463" alt="Screenshot 2026-01-03 145224" src="https://github.com/user-attachments/assets/d77cbd67-edbc-435d-a5e1-105e9444750f" />
+
+<img width="784" height="334" alt="Screenshot 2026-01-03 145345" src="https://github.com/user-attachments/assets/8927e56d-3c20-4947-91ef-0162f42a08f8" />
+
+
+**Dynamic of WINDOW() FUNCTION:
+We can add multiple aggregation on multiple levels.
+
+Flexibility of Window: Allows aggregation of data at different granularities within the same query.
+
+<img width="896" height="474" alt="Screenshot 2026-01-03 153755" src="https://github.com/user-attachments/assets/bdd5d968-2183-49c3-9ffa-c2ca0a96f319" />
+
+Another example with combination of dimensions:
+<img width="903" height="518" alt="Screenshot 2026-01-03 161258" src="https://github.com/user-attachments/assets/680a88a3-8fa6-4f5a-84c7-e467c680e74a" />
+
+** ORDER BY CLAUSE:
+-> Its very important to Sort the data within a window (Ascending | Descending).
+For Aggregate functions ORDER BY is optional
+And for Rank and Value functions ORDER BY  is must.
+
+Execution of PARTISION BY together with ORDER BY for the RANK():
+<img width="731" height="494" alt="Screenshot 2026-01-03 164829" src="https://github.com/user-attachments/assets/e41cf5ce-ea8a-43e5-bb12-0ca2a23e08e4" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
