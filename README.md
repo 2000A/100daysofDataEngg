@@ -949,27 +949,46 @@ example 5:
 <img width="694" height="439" alt="Screenshot 2026-01-03 204048" src="https://github.com/user-attachments/assets/2b510259-531d-4709-8e62-c7f966b0b4be" />
 
 
+Shortcut which can only be used only for PRECEDING
+
+<img width="400" height="364" alt="Screenshot 2026-01-05 192736" src="https://github.com/user-attachments/assets/2509df51-f72c-43f9-b256-9d618cc4ec6a" />
+
+ie. with n preceding and UNBOUNDED PRECEDING.
+
+sql HAS DEFAULT FRAME:
+SQL uses Default Frame, if ORDER BY is used without FRAME.
+And one more important thing that 
 
 
+<img width="726" height="496" alt="Screenshot 2026-01-05 195800" src="https://github.com/user-attachments/assets/a80766f3-f7e2-4e74-8093-f1e260a1724c" />
 
+The highlighted part ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW is the hidden and default frame if use ORDER BY without specifying FRAME.
 
+NOTE: ORDER BY always uses a FRAME.
 
+<img width="537" height="485" alt="Screenshot 2026-01-05 200245" src="https://github.com/user-attachments/assets/d9599a67-1072-4140-babe-f82336110781" />
 
+And once we remove ORDER BY as well the whole window get aggregated
 
+<img width="861" height="360" alt="Screenshot 2026-01-05 200353" src="https://github.com/user-attachments/assets/478b2bef-9855-4df0-bda9-f46bf46656a2" />
 
+WINDOW FUNCTION 4 RULES (OR LIMITATION OF WINDOW FUNCTION)
 
+#1 RULE: Window functions can be used ONLY in SELECT and ORDER BY Clause.
 
+This means WINDOW Functions can't be used to filter Data.(NOT IN WHERE or in GROUP BY CLAUSE)
 
+#2 RULE:
+Nesting Window Functions is not allowed!
 
+<img width="811" height="302" alt="Screenshot 2026-01-05 201801" src="https://github.com/user-attachments/assets/9fcf7808-9332-4a82-8841-88af88da8aa3" />
 
+#3 RULE:
+SQL execute WINDOW Functions after WHERE Clause.
+<img width="514" height="408" alt="Screenshot 2026-01-05 202006" src="https://github.com/user-attachments/assets/a1bbfcad-b52f-43ea-ba82-b29d4225b4f9" />
 
-
-
-
-
-
-
-
+#4 RULE:
+Window Function can be used together with GROUP BY in the same query, ONLY if the same columns are used.
 
 
 
