@@ -991,34 +991,48 @@ SQL execute WINDOW Functions after WHERE Clause.
 Window Function can be used together with GROUP BY in the same query, ONLY if the same columns are used.
 
 
+--------------------------------------------------------------------
+Aggregate Window Functions| COUNT,AVG,SUM,MAX,MIN
+
+What are Aggregate Window Function?
+
+- Aggregated functions gonna deliver at the end one aggregated value for a window or for a entire data.
+
+<img width="400" height="350" alt="Screenshot 2026-01-06 132107" src="https://github.com/user-attachments/assets/42abb886-2bd8-42d5-9b3c-6d925d1e8b8b" />
+
+Whole Window functions window definition can be empty for aggregate functions.
+
+<img width="700" height="328" alt="Screenshot 2026-01-06 132359" src="https://github.com/user-attachments/assets/34073f8f-21ca-4d81-afc4-0d9d8e223539" />
 
 
+<img width="400" height="308" alt="Screenshot 2026-01-06 132429" src="https://github.com/user-attachments/assets/def98730-9cde-4293-973d-a7e5d0b77496" />
 
 
+#1 COUNT() : Returns the number of rows within a window
 
+<img width="450" height="451" alt="Screenshot 2026-01-06 145401" src="https://github.com/user-attachments/assets/213f4c9b-e301-4abf-8475-a3804e9c7c82" />
 
+COUNT(*) : counts all the rows in a table, regardless of whether any value is NULL.
+(In this case count(*) counts blindly all rows)
 
+But in some senarios we need to ignore NULLs 
+<img width="437" height="437" alt="Screenshot 2026-01-06 150134" src="https://github.com/user-attachments/assets/1c471f44-40ad-4611-844f-4ecb73078bd5" />
 
+If we use * it will count all rows and if we use column in count it counts the number of non-NULL values in the column 
 
+one more point:
+COUNT(1) equals to COUNT(*)
 
+COUNT() special case: counts the number of values in a column, regardless of their data types.(Means it allows any data types)
 
+<img width="400" height="458" alt="Screenshot 2026-01-06 151653" src="https://github.com/user-attachments/assets/7108953c-5d07-4dac-8805-e2eecd76195e" />
 
+USE CASE: OVERALL ANALYSIS
+- Quick summary or snapshot of the entire dataset
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Using count(*) we can get big pitcure of buisness like total number of employees , orders , sales.
+Or having the big numbers about buisness like total customer base, orders which helps to understand how we the buisness doing.
+It helps to understand the content of your data.
 
 
 
