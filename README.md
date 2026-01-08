@@ -1035,6 +1035,89 @@ Or having the big numbers about buisness like total customer base, orders which 
 It helps to understand the content of your data.
 
 
+With below example we were able to to group analysis, to undertand pattersn withing different categories.
+like we have three customers with same number of orders except one i.e, customer with id 4.
+<img width="1315" height="731" alt="Screenshot 2026-01-08 134502" src="https://github.com/user-attachments/assets/cf699bac-19ef-4a43-92f0-af48fc9b85e6" />
+
+With the help of window function and count we can compare the stuff together.
+
+
+#3 Use case : Data Quality Check
+Detecting number of NULLs by coparing to total number of rows.
+<img width="889" height="495" alt="Screenshot 2026-01-08 142957" src="https://github.com/user-attachments/assets/b1fc4478-119d-40d7-a9fa-d49eb11d418a" />
+
+**One of the most important USE CASE of COUNT() WINDOW FUNCTION:
+DATA QUALITY ISSUE:
+
+1. Duplicates.
+
+<img width="671" height="266" alt="Screenshot 2026-01-08 145114" src="https://github.com/user-attachments/assets/8c7ff25e-8d7e-4829-84ad-d1829e4895d3" />
+
+by seeing below data model OrderId is PK of Orders table which will be unique and it should not contain any duplicates.
+<img width="695" height="402" alt="Screenshot 2026-01-08 145400" src="https://github.com/user-attachments/assets/652ee693-2bbd-4e9c-90f0-ef7955396215" />
+
+In real project we build query in order to find the PK is unique.
+Usually in while using DDL command we create PK as unique but in data analysis we get data from many different sources where we havn't build rules(i,.e tables).
+
+
+SELECT
+  OrderId,
+  COUNT(*) OVER (PARTITION BY OrderId) CheckPK
+FROM Sales.Orders
+
+**Divides the data by Primary Key (OrderId)
+**EXPECTATION: Maximum number of rows for each window(ID) = 1 
+
+<img width="774" height="475" alt="Screenshot 2026-01-08 151246" src="https://github.com/user-attachments/assets/2975a95c-7683-48bc-9a2c-041cdf8ac495" />
+-> Values of OrderId are unique
+
+OrderArchive table finding data quality issue:
+
+<img width="644" height="483" alt="Screenshot 2026-01-08 152441" src="https://github.com/user-attachments/assets/1a05f364-c69c-449c-a4f5-0b0b438090cc" />
+
+From above we can see OrderId 4 and 6 have Duplicate OrderId and are against our data model.
+
+Solution to generate a list where we have data quality issue specifically  for the duplicates.
+ 
+<img width="729" height="480" alt="Screenshot 2026-01-08 160350" src="https://github.com/user-attachments/assets/0d025ba7-7b55-4f9d-9782-c5f36f82cf2a" />
+
+<img width="600" height="366" alt="Screenshot 2026-01-08 161218" src="https://github.com/user-attachments/assets/2265804a-52e4-488b-bdb6-1da72e9a1c10" />
+
+----------------------SUM() WINDOW FUNCTION -----------------------
+Returns the sum of values within a window.
+RULE: SUM() Accepts Only Numbers
+
+Find the toatl sales for each product:
+
+<img width="782" height="428" alt="Screenshot 2026-01-08 170919" src="https://github.com/user-attachments/assets/cc41f595-3932-4a90-b58c-19cae5e25c0f" />
+
+#1 USE CASE: OVERALL ANALYSIS
+Quick summary or snapshot of the entire dataset
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
