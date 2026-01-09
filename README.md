@@ -1093,29 +1093,49 @@ Find the toatl sales for each product:
 
 #1 USE CASE: OVERALL ANALYSIS
 Quick summary or snapshot of the entire dataset
+ex: Find the toal sales across all orders.
 
+#2 USE CASE: Group-wise analsis, to understand patterns within different categories.
+ex:find the total sales for each product
 
+#3 USE CASE: Comparision analysis
 
+<img width="791" height="415" alt="Screenshot 2026-01-09 075924" src="https://github.com/user-attachments/assets/147af87c-4a7a-479b-9b22-dc5dce6f39b1" />
 
+Say Current Row is at March month
+1. Part to Whole Anlaysis:
+   Compare current sales to total sales
 
+2.compare to extremes Analyasis:
+  Compare surrent sales to the highest or lowest sales
 
+3. Compare to Average Analysis
+   Help to evaluate whether a value is above or below the average.
+ 
+ex: Find the percntage contirbution of each product's sales to the total sales.
 
+PROBLEM: Divinding two integer columns produces an integer, not a decimal.
 
+---------AVG() Window function---------------
+Returns the average of values within a window
+<img width="866" height="480" alt="Screenshot 2026-01-09 084643" src="https://github.com/user-attachments/assets/8c6095bc-962c-4311-9172-e29967b45bba" />
 
+<img width="870" height="504" alt="Screenshot 2026-01-09 084750" src="https://github.com/user-attachments/assets/4a914316-5af6-4721-8994-b0ed7ac84596" />
 
+#1 USE CASE: OVERALL ANALYSIS
+Quick summary or snapshot of the entire dataset
 
+#2 USE CASE: TOTAL PER GROUPS
+Group-wise analysis, to understand patterns within different categories.
 
+#3 USE CASE:  Comparision Analysis 
+COMPARE TO AVERAGE - Helps to evaluate whether a value is above or below the average.
+ex: Find all orders where sales are higher that the average sales across all orders
 
+WINDOW RULE:
+Window functions can't be used in WHERE clause
 
-
-
-
-
-
-
-
-
-
+therefore use subquery for solving above query
 
 
 
