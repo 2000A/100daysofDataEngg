@@ -1,4 +1,4 @@
-# 100daysofDataEngg
+<img width="777" height="299" alt="Screenshot 2026-01-10 162245" src="https://github.com/user-attachments/assets/7dbe9554-63e4-48d3-8600-069677e3d486" /><img width="721" height="321" alt="Screenshot 2026-01-10 162642" src="https://github.com/user-attachments/assets/781f2bdd-df39-4080-8554-1372716c8cb5" /># 100daysofDataEngg
 Repo contains my 100 days of Data Engineering journey from learning basics to advance python and sql, projects and learning other data warehouse tools and more
 
 SQL important notes:
@@ -1137,72 +1137,102 @@ Window functions can't be used in WHERE clause
 
 therefore use subquery for solving above query
 
+One Important note: for correct avg() calculation use COALESCE if we have NULLs.
 
+------------MIN/MAX WINDOW aggregation function --------------
 
+MIN(): Retruns the lowest value within a window
+MAX(): Returns the highest value within a window
 
+NULL are also ignored here in min() and max() window functions :)
 
+<img width="905" height="462" alt="Screenshot 2026-01-10 145043" src="https://github.com/user-attachments/assets/1a016481-0852-43e7-8232-7c4db59e36f5" />
 
+In buisness scenarios NULLs means zeroes therefore handling NULLs is important.
+for MIN() case NULLs becomes zero and MIN() makes zero as lowest value.
+<img width="885" height="398" alt="Screenshot 2026-01-10 150752" src="https://github.com/user-attachments/assets/da29709a-d694-4f4e-a8f3-076972273d6e" />
 
+#1 USE CASE: OVERALL ANALYSIS
+- Quick summary or snapshot of the entire dataset
+  
+ <img width="828" height="448" alt="Screenshot 2026-01-10 151602" src="https://github.com/user-attachments/assets/a2179c2a-f643-4f1a-8f58-0466d98e5948" />
 
+#2 USE CASE: TOTAL PER GROUPS
+- Group-wise analysis, to understand patterns within different categoreis.
 
+<img width="892" height="492" alt="Screenshot 2026-01-10 152034" src="https://github.com/user-attachments/assets/fed26726-a83f-493f-95d1-64c4eb21e976" />
 
 
+#3 USE CASE: Comparision Analysis
+Here We will compare current sale with the highest and lowest value
 
+-> COMPARE TO EXTREMES:
+Help to evaluate how well a value is performing relative to the extremes.
 
+-> DISTANCE FROM EXTREME
+The Lower the deviation, the closer the data point is to the extreme.
 
+-> Here we will check how far is the curernt value from the extreme
+the extreme here is lowest value
 
+<img width="889" height="494" alt="Screenshot 2026-01-10 155157" src="https://github.com/user-attachments/assets/5dcd231f-9ca5-42b6-91ae-8595ee59ddf3" />
 
+<img width="750" height="473" alt="Screenshot 2026-01-10 155211" src="https://github.com/user-attachments/assets/4b308bb5-464b-45eb-b6d8-c1ba0450509a" />
 
+<img width="580" height="208" alt="Screenshot 2026-01-10 155252" src="https://github.com/user-attachments/assets/3e65dec8-01a1-40f6-b111-3b775ed6aa24" />
 
+Min and Max functions are very powerfull in oreder to understand and evaluate your datapoints to extremes( extremes in this case is highest and lowest sales ).
 
 
+ANALYTICAL USE CASES OF Data Aggregations WINDOW FUNCTIONS:
 
+1.RUNNING & ROLLING TOTAL
+Key use case of two concepts is  Tracking for example: tracking Current Sales with Target Sales
 
+And Trend Analysis: Provind insights into historical patterns
 
+<img width="663" height="318" alt="Screenshot 2026-01-10 161411" src="https://github.com/user-attachments/assets/17ea7add-2547-4fff-b2c8-d12ef1b3e558" />
 
+<img width="674" height="414" alt="Screenshot 2026-01-10 161519" src="https://github.com/user-attachments/assets/7010bac5-a5a6-4c28-badb-f557f620be46" />
 
+<img width="836" height="500" alt="Screenshot 2026-01-10 161954" src="https://github.com/user-attachments/assets/47541e24-b9db-4566-b6bf-5d3ae1456f40" />
 
+Step by step working: 
+<img width="827" height="502" alt="Screenshot 2026-01-10 162101" src="https://github.com/user-attachments/assets/cb86dcb3-90b1-4452-9503-d45a6feb7fc3" />
 
+<img width="769" height="341" alt="Screenshot 2026-01-10 162309" src="https://github.com/user-attachments/assets/7a61ddd6-8f7d-4cf8-9c73-968fc767142b" />
 
+<img width="752" height="318" alt="Screenshot 2026-01-10 162401" src="https://github.com/user-attachments/assets/120970de-26d9-44c8-8d29-2e590a600580" />
 
+<img width="728" height="339" alt="Screenshot 2026-01-10 162509" src="https://github.com/user-attachments/assets/93f0479a-8c7a-4fca-bf8c-1fd6df45b178" />
 
+<img width="721" height="321" alt="Screenshot 2026-01-10 162642" src="https://github.com/user-attachments/assets/f5cd8c90-f4d3-463a-aed5-b51055b3f612" />
 
+The Running Total always considers everything from starting position till end without dropping any old member.
+The Running Total is great inorder to do tracking like budget tracking we consider whole dataset
 
+The Rolling Total always drop the oldest member in order to add something new and the window keep shifting.
+Rolling Total always do focused analysis like a buisness is growing or declining.
 
 
+2. MOVING AVERAGE
 
+--Calculate moving averag of sales for each product over time.
+NOTE: Over time analysis means sorting dates in ascending order
 
+<img width="883" height="463" alt="Screenshot 2026-01-10 165844" src="https://github.com/user-attachments/assets/c50b4a10-61f2-4f1b-be6a-b14c0bb68709" />
 
+Using AVG() together with Order BY  is Moving Average.
 
+--Calculate moving averag of sales for each product over time, including only the next order.
+<img width="887" height="482" alt="Screenshot 2026-01-10 170551" src="https://github.com/user-attachments/assets/dfa59f19-c645-4409-ad97-e2599955b2ed" />
 
 
+<img width="603" height="241" alt="Screenshot 2026-01-10 170652" src="https://github.com/user-attachments/assets/1a14a5d1-7459-4762-9c08-2409af58ac86" />
 
+<img width="599" height="235" alt="Screenshot 2026-01-10 170702" src="https://github.com/user-attachments/assets/bf1141ef-8f78-4848-8f95-5d672402aa32" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="632" height="253" alt="Screenshot 2026-01-10 170713" src="https://github.com/user-attachments/assets/5e4fc128-8c90-414f-9f92-714bbdff4447" />
 
 
 
