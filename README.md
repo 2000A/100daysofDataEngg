@@ -1234,10 +1234,13 @@ Using AVG() together with Order BY  is Moving Average.
 
 <img width="632" height="253" alt="Screenshot 2026-01-10 170713" src="https://github.com/user-attachments/assets/5e4fc128-8c90-414f-9f92-714bbdff4447" />
 
+Conclusion:
 
 
+<img width="1287" height="669" alt="Screenshot 2026-01-10 224939" src="https://github.com/user-attachments/assets/63a7bfb1-c682-48d4-804d-28093402298e" />
 
 
+<img width="636" height="487" alt="Screenshot 2026-01-10 225536" src="https://github.com/user-attachments/assets/ef6c2bbb-2768-45d0-b8fc-4e92b26ac3d0" />
 
 
 
