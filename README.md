@@ -1242,7 +1242,11 @@ Conclusion:
 
 <img width="636" height="487" alt="Screenshot 2026-01-10 225536" src="https://github.com/user-attachments/assets/ef6c2bbb-2768-45d0-b8fc-4e92b26ac3d0" />
 
+--------------------------------------------------------------------
 
+SQL Value Window Functions| LEAD, LAG, FIRST_VALUE, LAST_VALUE
+
+WHAT ARE VALUE WINDOW FUNCTIONS?
 
 
 
